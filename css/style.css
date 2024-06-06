@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-feature-settings: "palt";
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: white;
+    /* font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; */
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+body {
+    background: skyblue;
+}
+.pc_nav {
+    padding: 80px 80px 0 0;
+}
+/*文字を縦書きにする*/
+.vertical-rl {
+    writing-mode: vertical-rl;
+}
+h1 {
+    padding-left: 10%;
+}
+h2 {
+    font-size: 120px;
+    line-height: 1.7;
+    padding-top: 200px;
+}
+h3 {
+    font-size: 20px;
+    line-height: 1.7;
+}
+.title {
+    text-align: center;
+}
+.text {
+    font-size: 15px;
+    line-height: 2.1;
+}
+/*----------ヘッダー----------*/
+.pc_nav {
+    text-align: left;
+}
+/*----------コンセプト----------*/
+.line {
+    border-right: thick solid #ffff;
+    border-width: 1px;
+    padding-left: 12%;
+    height: 100%;
+    /* left: 50%; */
+    position: absolute;
+}
+.content_box {
+    max-width: 52%;
+    margin: 0 auto;
+}
+.consept_title {
+    font-size: 55px;
+    line-height: 1.6;
+}
+.consept_subtitle {
+    font-size: 35px;
+    line-height: 1.4;
+    padding-bottom: 45px;
+}
+.consept_text {
+    font-size: 24px;
+    line-height: 1.4;
+    padding-bottom: 200px;
+}
+
+/*----------アバウト----------*/
+.pc_img {
+    margin: auto;
+    display: block;
+    padding: 30px 0 30px 0;
+}
+.name {
+    text-align: center;
+}
+.about_name {
+    font-size: 45px;
+}
+.about_sub_name {
+    font-size: 22px;
+    padding: 25px 0 100px 0;
+}
+#about_subtitle {
+    padding-bottom: 40px;
+}
+#about_text {
+    padding-bottom: 70px;
+}
+.prpfile {
+    line-height: 1.7;
+    display: flex;
+}
+.about_text {
+    font-size: 15px;
+    width: 95px;
+    display: flex;
+}
+h4 {
+    font-size: 24px;
+    width: 75px;
+}
+li {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/*----------ワークス----------*/
+#works_text {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*----------コンタクト----------*/
+#contact_text {
+    text-align: center;
+}
+.sub_text {
+    font-size: 14px;
+}
