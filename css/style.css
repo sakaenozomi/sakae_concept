@@ -9,6 +9,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 dl,
 dt,
@@ -24,6 +26,10 @@ li {
     font-weight: 400;
     font-style: normal;
     scroll-behavior: smooth;
+}
+h5,
+h6 {
+    color: #000073;
 }
 h2,
 .concept_title,
@@ -62,11 +68,11 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* .works_bg {
+.works_bg {
     background-image: url("../images/1x/works_bg_1-80.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-} */
+}
 .works_item_bg {
     background-image: url("../images/1x/works_item_bg_4-80.jpg");
     background-repeat: no-repeat;
@@ -442,26 +448,9 @@ h3 {
 }
 /*----------ワークページ----------*/
 
-.works_bg img {
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-/* { 
-     margin: 0 auto;
-    height: 600px;
-    width: 82%;
-    background-image: linear-gradient(
-        359deg,
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0) 42%
-    );
-} */
 #wk_contant {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1100px;
     background-image: url("../images/1x/wk_item_bg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -469,19 +458,32 @@ h3 {
 }
 
 .wk_1 {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 .wk_1 img {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    padding: 80px 0;
 }
 #wk_text {
     color: #000073;
+    margin: 0 auto;
+    width: 70%;
+}
+h5 {
+    margin: 0;
 }
 #wk_title {
+    text-align: center;
+    justify-content: space-between;
     display: flex;
+    align-items: flex-end;
+    border-bottom: solid #333333 0.5px;
+    padding-bottom: 20px;
+
+    line-height: 1.7;
 }
 .wk_title {
     font-size: 20px;
@@ -490,10 +492,49 @@ h3 {
     font-size: 16px;
     display: flex;
 }
-.wk_item,
-.wk_text_item {
+.wk_item {
     font-size: 15px;
     line-height: 2.2;
+    color: #000073;
+}
+.wk_text_contants {
+    max-width: 50%;
+    padding-bottom: 110px;
+}
+span {
+    color: #333333;
+}
+.wk_text {
+    color: #000073;
+    font-size: 15px;
+    line-height: 1.6;
+    padding-top: 20px;
+}
+h6 {
+    font-size: 15px;
+    color: #000073;
+    padding-top: 30px;
+}
+.wk_text_item {
+    display: flex;
+    justify-content: space-between;
+}
+.works_text_contant ul {
+    justify-content: flex-start;
+    width: 50%;
+}
+.wk-text_contant {
+    display: flex;
+}
+.wk_list {
+    /* max-width: 50%; */
+    padding: 0%;
+}
+span {
+    padding-left: 8%;
+}
+#wk_btn {
+    padding-bottom: 160px;
 }
 /*----------コンタクト----------*/
 #contact {
@@ -505,6 +546,7 @@ h3 {
 .contact_text {
     font-size: 14px;
     padding-bottom: 40px;
+    max-width: 36%;
 }
 .contact_subtext {
     font-size: 14px;
@@ -659,15 +701,6 @@ textarea.c-form__input {
 .works_contact {
     position: relative;
 }
-/* .contact_back {
-    background-color: gray;
-    width: 1990;
-    height: 700px;
-    border-radius: 35px;
-    align-items: center;
-    margin: 0 auto;
-    position: relative;
-} */
 
 /*----------フッター----------*/
 #footer {
