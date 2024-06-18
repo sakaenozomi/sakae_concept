@@ -40,7 +40,8 @@ h4,
 .header_contact,
 .footer_about,
 .footer_works,
-.footer_contact {
+.footer_contact,
+.num {
     font-family: fraunces-variable, sans-serif;
     font-variation-settings: "SOFT" 0, "WONK" 1, "opsz" 9, "wght" 600;
 }
@@ -63,6 +64,50 @@ ul {
     /*左の「・」を消す*/
     list-style: none;
 }
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #eee;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg {
+    width: 300px;
+}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*アニメーション前の指定*/
+#mask path {
+    fill-opacity: 0; /*最初は透過0で見えない状態*/
+    transition: fill-opacity 0.5s; /*カラーがつく際のアニメーション0.5秒で変化*/
+    fill: none; /*塗りがない状態*/
+    stroke: #333; /*線の色*/
+}
+
+/*アニメーション後に.doneというクラス名がで付与された時の指定*/
+#mask.done path {
+    fill: #333; /*塗りの色*/
+    fill-opacity: 1; /*透過1で見える状態*/
+    stroke: none; /*線の色なし*/
+}
+/* 背景 */
 .top_bg {
     background-image: url("../images/1x/top_bg_4-80.jpg");
     background-repeat: no-repeat;
@@ -80,7 +125,11 @@ ul {
 }
 
 .pc_header_nav {
-    padding: 80px 80px 0 0;
+    padding-right: 80px;
+}
+
+.sp_nav {
+    display: none;
 }
 
 /* 縦書きテキスト */
@@ -198,6 +247,7 @@ h3 {
     display: block;
     padding: 30px 0 30px 0;
 }
+
 .name {
     text-align: center;
 }
@@ -546,7 +596,7 @@ span {
 .contact_text {
     font-size: 14px;
     padding-bottom: 40px;
-    max-width: 36%;
+    /* max-width: 36%; */
 }
 .contact_subtext {
     font-size: 14px;
@@ -732,4 +782,211 @@ textarea.c-form__input {
 }
 .privacy {
     font-size: 14px;
+}
+
+@media screen and (max-width: 1100px) {
+    main::before {
+        content: "海のように、深く。";
+        font-family: hiragino-mincho-pron, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        color: #fff;
+        font-size: 50px;
+        position: absolute;
+        top: -450px;
+        left: 100px;
+        writing-mode: vertical-rl;
+        font-feature-settings: initial;
+        transform: translate(-50%, 0%);
+    }
+    main {
+        margin-top: 450px;
+    }
+    main::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100px;
+        width: 1px;
+        background: #fff;
+    }
+    .logo_img {
+        margin-bottom: 325px;
+    }
+
+    .pc_header_nav {
+        display: none;
+    }
+    /*ハンバーガー*/
+    .sp_btn {
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        /*位置の調節*/
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        /*重なり具合*/
+        z-index: 2;
+    }
+    .sp_btn span {
+        display: block;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        /*位置の調節*/
+        position: relative;
+        top: 10px;
+        /*アニメーション*/
+        transition: 0.3s;
+    }
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        /*位置の調節*/
+        position: absolute;
+        /*アニメーション*/
+        transition: 0.3s;
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+    .sp_btn span::after {
+        top: 10px;
+    }
+    /*ばつ印*/
+    .sp_btn.open span {
+        background: transparent;
+    }
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    /*spメニューの見た目*/
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /*デバイスの高さの100％*/
+        background: rgba(0, 0, 0, 0.8);
+        /*重なり具合*/
+        z-index: 1;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px;
+        color: #fff;
+        font-size: 18px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+            "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .top_bg {
+        background-image: url("../images/1x/1x/sp_bg-80.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main::before {
+        content: "海のように、深く。";
+        font-family: hiragino-mincho-pron, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        color: #fff;
+        font-size: 50px;
+        position: absolute;
+        top: -500px;
+        left: 49%;
+        margin: 0 auto;
+        writing-mode: vertical-rl;
+        font-feature-settings: initial;
+        transform: translate(-50%, 0%);
+        letter-spacing: 0.2rem;
+    }
+
+    main {
+        margin-top: 700px;
+    }
+
+    main::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 25px;
+        width: 1px;
+        background: #fff;
+    }
+
+    .concept_title {
+        font-size: 28px;
+        line-height: 1.6;
+    }
+    .logo_img {
+        padding: 30px 0 0 30px;
+        width: 80px;
+        margin-bottom: 100px;
+    }
+    .concept_subtitle {
+        font-size: 25px;
+        line-height: 2;
+    }
+    #concept_text {
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 30px 0 50px 0;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    .about {
+        text-align: left;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    #about {
+        max-width: 80%;
+    }
+    .about_title {
+        text-align: left;
+    }
+    picture {
+        padding-top: 60px;
+        margin-right: auto;
+    }
+    .about_name {
+        font-size: 30px;
+    }
+    .about_sub_name {
+        font-size: 18px;
+    }
+    #about_subtitle {
+        font-size: 20px;
+    }
+    #profile_title {
+        font-size: 25px;
+    }
+    .profile_subtitle {
+        font-size: 14px;
+    }
 }
