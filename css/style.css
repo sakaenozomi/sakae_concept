@@ -63,6 +63,99 @@ a:hover {
 ul {
     /*左の「・」を消す*/
     list-style: none;
+    margin: 0;
+}
+.br_sp {
+    display: none;
+}
+.content_bg {
+    position: relative;
+}
+.bg_bubble_right {
+    background-image: url("../images/1x/1x/bg_item.png");
+    background-repeat: no-repeat;
+    width: 11%;
+    height: 675px;
+    position: absolute;
+}
+.bg_grass_right {
+    background-image: url("../images/1x/1x/bg_item_1.png");
+    background-repeat: no-repeat;
+    width: 162px;
+    height: 718px;
+    mix-blend-mode: multiply;
+    position: absolute;
+}
+.bg_bubble_left {
+    background-image: url("../images/1x/1x/bg_item.png");
+    background-repeat: no-repeat;
+    width: 11%;
+    height: 675px;
+    position: absolute;
+}
+.bg_grass_left {
+    background-image: url("../1x/bg_item2.png");
+    background-repeat: no-repeat;
+    width: 162px;
+    height: 718px;
+    mix-blend-mode: multiply;
+    position: absolute;
+}
+.bg_fish_01 {
+    background-image: url("../images/1x/1x/fish1.png");
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 42px;
+    position: absolute;
+}
+.bg_fish_02 {
+    background-image: url("../images/1x/1x/fish2.png");
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 42px;
+    position: absolute;
+}
+.bg_fish_03 {
+    background-image: url("../images/1x/1x/fish3.png");
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 42px;
+    position: absolute;
+}
+.bg_fish_04 {
+    background-image: url("../images/1x/1x/fish4.png");
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 20px;
+    position: absolute;
+}
+.bg_fish_05 {
+    background-image: url("../images/1x/1x/fish5.png");
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 20px;
+    position: absolute;
+}
+.bg_fish_06 {
+    background-image: url("../images/1x/1x/fish6.png");
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 42px;
+    position: absolute;
+}
+.bg_works_bubble {
+    background-image: url("../1x/works_bg_item.png");
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 42px;
+    position: absolute;
+}
+.bg_wk_bubble {
+    background-image: url("../1x/wk_bubble.png");
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 270px;
+    position: absolute;
 }
 /* ========= LoadingのためのCSS ===============
 
@@ -107,7 +200,7 @@ ul {
     fill-opacity: 1; /*透過1で見える状態*/
     stroke: none; /*線の色なし*/
 }
-*/
+
 /* 背景 */
 .top_bg {
     background-image: url("../images/1x/top_bg_4-80.jpg");
@@ -148,7 +241,7 @@ main::before {
     font-size: 50px;
     position: absolute;
     top: -450px;
-    left: 100px;
+    left: 150px;
     writing-mode: vertical-rl;
     font-feature-settings: initial;
     transform: translate(-50%, 0%);
@@ -163,7 +256,7 @@ main::after {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 100px;
+    left: 150px;
     width: 1px;
     background: #fff;
 }
@@ -248,7 +341,39 @@ h3 {
     display: block;
     padding: 30px 0 30px 0;
 }
+#about .bg_bubble_right {
+    top: 10%;
+    right: 2%;
+}
 
+#about .bg_grass_right {
+    top: 50%;
+    right: 0;
+}
+#works .bg_bubble_left {
+    top: -5%;
+    left: 0%;
+}
+
+h2.about {
+    position: relative;
+    line-height: normal;
+    display: inline-block;
+    z-index: 1;
+}
+h2.about::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 30px;
+    background-image: url("../images/1x/1x/about_img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 20px;
+    right: -45px;
+    z-index: -1;
+}
 .name {
     text-align: center;
 }
@@ -275,10 +400,12 @@ h3 {
     align-items: flex-end;
     gap: 20px;
     max-width: 52%;
+    min-width: 225px;
 }
 #profile_title {
     font-size: 24px;
 }
+
 .profile_subtitle {
     font-size: 15px;
     display: flex;
@@ -303,6 +430,8 @@ h3 {
 }
 .skill {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 /*----------ワークス----------*/
@@ -313,6 +442,49 @@ h3 {
 .works {
     text-align: center;
 }
+#works .bg_grass_left {
+    top: 50%;
+    left: 0;
+}
+#works .bg_fish_01 {
+    top: 40%;
+    left: 3%;
+}
+#works .bg_fish_02 {
+    top: 70%;
+    right: 0;
+}
+#works .bg_fish_03 {
+    top: 90%;
+    left: 35%;
+}
+#works .bg_fish_04 {
+    top: 92%;
+    left: 30%;
+}
+#works .bg_fish_05 {
+    top: 100%;
+    left: 22%;
+}
+h2.works {
+    position: relative;
+    line-height: normal;
+    display: inline-block;
+    z-index: 1;
+}
+h2.works::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/1x/1x/works_img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 70px;
+    right: -35px;
+    z-index: -1;
+}
 #works_text {
     text-align: center;
     padding: 20px 0 60px 0;
@@ -321,6 +493,7 @@ h3 {
     max-width: 100%;
     margin: 0 auto;
     display: block;
+    padding: 0 3%;
 }
 #works_box {
     margin: auto;
@@ -363,7 +536,7 @@ h3 {
     width: 35%;
 }
 .works_box_3 img {
-    width: 74%;
+    width: 46%;
 }
 .box_text {
     color: #ffff;
@@ -422,6 +595,11 @@ h3 {
     flex-wrap: wrap;
     gap: 30px;
     text-align: center;
+}
+
+#works .works_bubble {
+    top: 30%;
+    left: 0;
 }
 .works_item {
     margin: 0 auto;
@@ -501,19 +679,100 @@ h3 {
 
 #wk_contant {
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 82%;
     background-image: url("../images/1x/wk_item_bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 30px 0;
 }
+#wk_contant .bg_grass_right {
+    top: 85%;
+    right: 0%;
+}
+#wk_lp_contant {
+    margin: 0 auto;
+    max-width: 82%;
+    background-image: url("../1x/works_bg_lp.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px 0;
+}
 
-.wk_1 {
+#wk_lp_contant .bg_grass_right {
+    top: 85%;
+    right: 0%;
+}
+
+.bg_wk_bubble {
+    top: 100%;
+    left: 0%;
+}
+.wk_1,
+.wk_2,
+.wk_3,
+.wk_4,
+.wk_5 {
     width: 70%;
     margin: 0 auto;
 }
 .wk_1 img {
     width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+.wk_2 img {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+.wk_3_img {
+    display: flex;
+    align-items: flex-end;
+}
+.wk_3_1 {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+.wk_3_2 {
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+.wk_4 img {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+.wk_lp_item {
+    display: flex;
+    align-items: flex-start;
+}
+.wk_lp_item_pc {
+    width: 63%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+.wk_lp_item_sp {
+    width: 17%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+.wk_5 img {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+}
+.wk_hare_lp {
+    width: 63%;
     margin: 0 auto;
     text-align: center;
     padding: 80px 0;
@@ -548,12 +807,15 @@ h5 {
     line-height: 2.2;
     color: #000073;
 }
+.wk_items {
+    color: #000073;
+}
 .wk_text_contants {
     max-width: 50%;
     padding-bottom: 110px;
 }
 span {
-    color: #333333;
+    color: white;
 }
 .wk_text {
     color: #000073;
@@ -574,8 +836,8 @@ h6 {
     justify-content: flex-start;
     width: 50%;
 }
-.wk-text_contant {
-    display: flex;
+.wk_text_contant {
+    width: 50%;
 }
 .wk_list {
     /* max-width: 50%; */
@@ -590,6 +852,29 @@ span {
 /*----------コンタクト----------*/
 #contact {
     width: 64%;
+}
+#contact .bg_fish_06 {
+    top: 30%;
+    right: 5%;
+}
+h2.contact {
+    position: relative;
+    line-height: normal;
+    display: inline-block;
+    z-index: 1;
+}
+h2.contact::after {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 200px;
+    background-image: url("../images/1x/1x/contact_item.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 50px;
+    right: -150px;
+    z-index: -1;
 }
 #contact_text {
     text-align: center;
@@ -987,5 +1272,11 @@ textarea.c-form__input {
     }
     .profile_subtitle {
         font-size: 14px;
+    }
+    .profile_dots {
+        display: none;
+    }
+    .br_sp {
+        display: block;
     }
 }
