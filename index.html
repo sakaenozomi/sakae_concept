@@ -2,11 +2,20 @@
 <html lang="ja">
 
 <head>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>コンセプトシート</title>
     <link rel="stylesheet" href="https://use.typekit.net/cwg0thw.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    // Add the new slick-theme.css if you want the default styling
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script>
         (function (d) {
             var config = {
@@ -90,13 +99,15 @@
                 <div class="sp_btn ">
                     <span></span>
                 </div>
+                <div class="sp_btn ">
+                    <span></span>
+                </div>
                 <nav class="sp_nav">
                     <ul>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#works">works</a></li>
-                        <li><a href="#contact">contact</a></li>
+                        <li class="header_about"><a href="#about">about</a></li>
+                        <li class="header_works"><a href="./works.html">works</a></li>
+                        <li class="header_contact"><a href="#contact">contact</a></li>
                     </ul>
-
                 </nav>
 
             </div>
@@ -117,17 +128,15 @@
             </div>
             <div class="content_bg">
                 <div id="about" class="content_box">
-                    <div class="title">
+                    <div id="about_title" class="title">
                         <h2 class="about">about</h2>
-                        <!-- <img class="about_item" src="./images/1x/1x/about_img.png" alt=""> -->
+
                         <h3 class="about_title">わたしのこと</h3>
                     </div>
                     <picture>
                         <source srcset="./images/1x/sp_profile_img.png" media="(max-width:767px)">
                         <img src="./images/1x/pc_profile_img.png" alt="プロフィール写真">
                     </picture>
-                    <!-- <img class="about_img" src="./images/1x/pc_profile_img.png" alt=""> -->
-                    <!-- <img class="sp_img" src="/Users/nozomi/Desktop/sakae_concept/images/1x/アセット 14.png" alt=""> -->
 
                     <div class="name">
                         <p class="about_name">NOZOMI SAKAE</p>
@@ -159,11 +168,16 @@
                         <p class="profile_subtitle">【プロフィール】</p>
                     </div>
                     <ul id="profile_list">
-                        <li class="profile_list">所在地 <span class="profile_dots">・・・・・・</span> <br class="br_sp">大阪市内
+                        <li class="profile_list">所在地 <span class="profile_dots">・・・・・・</span> <br class="br_sp">
+                            <div class="list_text">大阪市内</div>
                         </li>
-                        <li class="profile_list">お問い合わせ ・・・ noozoomey@gmail.com</li>
-                        <li class="profile_list">事業内容 ・・・・・ Web制作におけるディレクション、デザイン、<br>
-                            HTML・CSSコーディング、スマートフォンサイト</li>
+                        <li class="profile_list">お問い合わせ<span class="profile_dots"> ・・・ </span><br class="br_sp">
+                            <div class="list_text">noozoomey@gmail.com</div>
+                        </li>
+                        <li class="profile_list">事業内容<span class="profile_dots"> ・・・・・ </span><br class="br_sp">
+                            <div class="list_text">Web制作におけるディレクション、デザイン、<br>
+                                HTML・CSSコーディング、スマートフォンサイト</div>
+                        </li>
                     </ul>
                     <div id="profile_img">
                         <div class="profile_img">
@@ -227,7 +241,7 @@
                             <p class="box_title">旅行メディアバナーデザイン</p>
                             <p class="box_subtitle">#バナーデザイン</p>
                         </div>
-                        <img src="./images/kadai2_sakae_02.jpg" alt="">
+                        <img src="./images/kadai2_sakae_02.jpeg" alt="">
                         <div class="works_bg_blend"></div>
                     </div>
                     <div id="works_box" class="works_box_3">
@@ -238,79 +252,77 @@
                         <img src="./1x/lp_works.png" alt="">
                         <div class="works_bg_blend"></div>
                     </div>
-                    <!-- <div id="works_button">
-            <div class="button"></div>
-            <p class="button_text">
-                もっと見る
-            </p>
-        </div> -->
-
-                    <div class="works_btn_container">
-                        <button class="btn_parts" onclick="location.href='./works.html'">もっと見る</button>
-                    </div>
-
                 </div>
-            </div>
-            <div class="content_bg">
-                <div id="contact" class="content_box">
-                    <div class="bg_fish_06"></div>
-                    <div class="title">
-                        <h2 class="contact">Contact us</h2>
-                        <h3 class="contact_title">お問い合わせ</h3>
-                    </div>
-                    <!-- </div> -->
-                    <div id="contact_text">
-                        <p class="text">
-                            「相談したい。」「話を聞いてみたい。」と思ってくださった方は<br>
-                            下記メールフォームよりお問い合わせください。
-                        </p>
-                        <p class="contact_text">
-                            以下のフォームに必要事項をご入力いただき、内容をご確認のうえ、<br>
-                            送信ボタンを押してください。 ( ＊マークは必須項目です。)</p>
-                    </div>
+
+
+                <div class="works_btn_container">
+                    <button class="btn_parts" onclick="location.href='./works.html'">もっと見る</button>
                 </div>
-                <form
-                    action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe00eJN0CWayVTtmGW0ONrc6MT8bA5no3F9iHgbGwaOm18KRw/formResponse"
-                    method="POST" class="c-form">
-                    <p class="contact_subtext">＊は必須項目となります。</p>
 
-                    <div class="c-form__item">
-                        <label class="c-form__label" for="field-name">お名前＊<span class="c-form__required"></span></label>
-                        <input class="c-form__input" id="field-name" placeholder="山田 花子" type="text"
-                            required="required" />
-                    </div>
-                    <div class="c-form__item">
-                        <label class="c-form__label" for="field-name">ふりがな＊<span
-                                class="c-form__required"></span></label>
-                        <input class="c-form__input" id="field-name" placeholder="やまだ　はなこ" type="text"
-                            required="required" />
-                    </div>
-                    <div class="c-form__item">
-                        <label class="c-form__label" for="field-mail">メールアドレス＊<span
-                                class="c-form__required"></span></label>
-                        <input class="c-form__input" id="field-mail" placeholder="aaaaa@gmail.com" type="email"
-                            required="required" />
-                    </div>
-                    <div class="c-form__item">
-                        <label class="c-form__label" for="field-mail">電話番号<span class="c-form__required"></span></label>
-                        <input class="c-form__input" id="field-mail" placeholder="090-9999-9999" type="tel" />
-                    </div>
-                    <div class="c-form__item">
-                        <label class="c-form__label" for="field-message">お問い合わせ内容＊</label>
-                        <textarea class="c-form__input" id="field-message" placeholder=""></textarea>
-                    </div>
-                    <div class="c-form__submit">
-                        <button class="btn_parts" type="submit">送信する</button>
-                    </div>
 
-                    <!-- <div id="contact_button">
+
+                <div class="content_bg">
+                    <div id="contact" class="content_box">
+                        <div class="bg_fish_06"></div>
+                        <div class="title">
+                            <h2 class="contact">Contact us</h2>
+                            <h3 class="contact_title">お問い合わせ</h3>
+                        </div>
+                        <!-- </div> -->
+                        <div id="contact_text">
+                            <p class="text">
+                                「相談したい。」「話を聞いてみたい。」と思ってくださった方は<br>
+                                下記メールフォームよりお問い合わせください。
+                            </p>
+                            <p class="contact_text">
+                                以下のフォームに必要事項をご入力いただき、内容をご確認のうえ、<br>
+                                送信ボタンを押してください。 ( ＊マークは必須項目です。)</p>
+                        </div>
+                    </div>
+                    <form
+                        action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe00eJN0CWayVTtmGW0ONrc6MT8bA5no3F9iHgbGwaOm18KRw/formResponse"
+                        method="POST" class="c-form">
+                        <p class="contact_subtext">＊は必須項目となります。</p>
+
+                        <div class="c-form__item">
+                            <label class="c-form__label" for="field-name">お名前＊<span
+                                    class="c-form__required"></span></label>
+                            <input class="c-form__input" id="field-name" placeholder="山田 花子" type="text"
+                                required="required" />
+                        </div>
+                        <div class="c-form__item">
+                            <label class="c-form__label" for="field-name">ふりがな＊<span
+                                    class="c-form__required"></span></label>
+                            <input class="c-form__input" id="field-name" placeholder="やまだ　はなこ" type="text"
+                                required="required" />
+                        </div>
+                        <div class="c-form__item">
+                            <label class="c-form__label" for="field-mail">メールアドレス＊<span
+                                    class="c-form__required"></span></label>
+                            <input class="c-form__input" id="field-mail" placeholder="aaaaa@gmail.com" type="email"
+                                required="required" />
+                        </div>
+                        <div class="c-form__item">
+                            <label class="c-form__label" for="field-mail">電話番号<span
+                                    class="c-form__required"></span></label>
+                            <input class="c-form__input" id="field-mail" placeholder="090-9999-9999" type="tel" />
+                        </div>
+                        <div class="c-form__item">
+                            <label class="c-form__label" for="field-message">お問い合わせ内容＊</label>
+                            <textarea class="c-form__input" id="field-message" placeholder=""></textarea>
+                        </div>
+                        <div class="c-form__submit">
+                            <button class="btn_parts" type="submit">送信する</button>
+                        </div>
+
+                        <!-- <div id="contact_button">
                 <div class="button"></div>
                 <p class="button_text">
                     送信する
                 </p>
             </div> -->
-                </form>
-            </div>
+                    </form>
+                </div>
 
         </main>
 
@@ -323,7 +335,9 @@
                         <li class="footer_about"><a href="#about">about</a></li>
                         <li class="footer_works"><a href="#works">works</a></li>
                         <li class="footer_contact"><a href="#contact">contact</a></li>
-                        <li class="privacy"><a href="#privacy">プライバシーポリシー</a></li>
+                        <a href="./privacy.html">
+                            <li class="privacy">プライバシーポリシー</li>
+                        </a>
                     </ul>
                 </nav>
 
@@ -345,6 +359,60 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
     <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-5/js/4-1-5.js"></script>
+
+
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle()
+                $('.sp_btn').toggleClass('open');
+            })
+
+            // $('.container').slick({
+            //     /* 自動でスライドさせる */
+            //     autoplay: true,
+            //     /* スライドさせる速度 */
+            //     autoplaySpeed: 2000,
+            //     /* ドットのナビゲーションを表示させる */
+            //     dots: true,
+            //     arrows: false,
+            // }); 
+
+
+            $(document).ready(function () {
+                $('.container').slick({
+                    centerMode: true,
+                    infinite: true,
+                    centerPadding: '60px',
+                    slidesToShow: 3,
+                    speed: 500,
+                    responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    }, {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }]
+                });
+            });
+
+        });
+
+
+
+
+    </script>
 </body>
 
 </div>

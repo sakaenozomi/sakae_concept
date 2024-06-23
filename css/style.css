@@ -15,7 +15,8 @@ p,
 dl,
 dt,
 dd,
-li {
+li,
+p {
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -350,10 +351,6 @@ h3 {
     top: 50%;
     right: 0;
 }
-#works .bg_bubble_left {
-    top: -5%;
-    left: 0%;
-}
 
 h2.about {
     position: relative;
@@ -451,20 +448,28 @@ h2.about::after {
     left: 3%;
 }
 #works .bg_fish_02 {
-    top: 70%;
+    top: 40%;
     right: 0;
 }
 #works .bg_fish_03 {
-    top: 90%;
+    top: 52%;
     left: 35%;
 }
 #works .bg_fish_04 {
-    top: 92%;
+    top: 54%;
     left: 30%;
 }
 #works .bg_fish_05 {
-    top: 100%;
+    top: 58%;
     left: 22%;
+}
+#works .bg_bubble_left {
+    top: -5%;
+    left: 0%;
+}
+.works_contact .bg_grass_right {
+    top: -40%;
+    right: 0%;
 }
 h2.works {
     position: relative;
@@ -704,8 +709,8 @@ h2.works::after {
 }
 
 .bg_wk_bubble {
-    top: 100%;
-    left: 0%;
+    top: 10%;
+    left: 3%;
 }
 .wk_1,
 .wk_2,
@@ -843,7 +848,7 @@ h6 {
     /* max-width: 50%; */
     padding: 0%;
 }
-span {
+.wk_items {
     padding-left: 8%;
 }
 #wk_btn {
@@ -1037,6 +1042,22 @@ textarea.c-form__input {
 .works_contact {
     position: relative;
 }
+/*----------プライバシーポリシー----------*/
+.privacy_title {
+    text-align: center;
+    font-size: 23px;
+    padding-bottom: 110px;
+}
+
+#privacy {
+    margin: 0 auto;
+    max-width: 64%;
+}
+.privacy_text {
+    font-size: 25px;
+    line-height: 1.2;
+    padding: 40px 0 20px 0;
+}
 
 /*----------フッター----------*/
 #footer {
@@ -1068,38 +1089,12 @@ textarea.c-form__input {
     font-size: 14px;
 }
 
+.sp_nav,
+.sp_btn {
+    display: none;
+}
 @media screen and (max-width: 1100px) {
-    main::before {
-        content: "海のように、深く。";
-        font-family: hiragino-mincho-pron, sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        color: #fff;
-        font-size: 50px;
-        position: absolute;
-        top: -450px;
-        left: 100px;
-        writing-mode: vertical-rl;
-        font-feature-settings: initial;
-        transform: translate(-50%, 0%);
-    }
-    main {
-        margin-top: 450px;
-    }
-    main::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 100px;
-        width: 1px;
-        background: #fff;
-    }
-    .logo_img {
-        margin-bottom: 325px;
-    }
-
-    .pc_header_nav {
+    .pc_nav {
         display: none;
     }
     /*ハンバーガー*/
@@ -1119,7 +1114,7 @@ textarea.c-form__input {
         width: 33px;
         height: 3px;
         border-radius: 2px;
-        background: #fff;
+        background: transparent;
         /*位置の調節*/
         position: relative;
         top: 10px;
@@ -1164,10 +1159,34 @@ textarea.c-form__input {
         left: 0;
         width: 100%;
         height: 100vh; /*デバイスの高さの100％*/
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(245, 242, 242, 0.9);
         /*重なり具合*/
         z-index: 1;
     }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: #000 !important;
+    }
+
+    .container #work_box {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 100px;
+        color: #666;
+        margin: 10px;
+        text-align: center;
+        background-color: #e0e0e0;
+        opacity: 0.4;
+        transition: all 300ms ease;
+    }
+
+    .center-mode p.slick-center {
+        color: #f50057;
+        opacity: 1;
+        transform: scale(1.16);
+    }
+
     .sp_nav ul {
         display: flex;
         flex-direction: column;
@@ -1176,11 +1195,45 @@ textarea.c-form__input {
         height: 100%;
     }
     .sp_nav ul li {
-        padding: 20px;
-        color: #fff;
+        padding: 40px;
+        color: #3f8fca;
         font-size: 18px;
-        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
-            "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+        font-family: fraunces-variable, sans-serif;
+        font-variation-settings: "SOFT" 0, "WONK" 1, "opsz" 9, "wght" 600;
+    }
+
+    main::before {
+        content: "海のように、深く。";
+        font-family: hiragino-mincho-pron, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        color: #fff;
+        font-size: 50px;
+        position: absolute;
+        top: -450px;
+        left: 100px;
+        writing-mode: vertical-rl;
+        font-feature-settings: initial;
+        transform: translate(-50%, 0%);
+    }
+    main {
+        margin-top: 450px;
+    }
+    main::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100px;
+        width: 1px;
+        background: #fff;
+    }
+    .logo_img {
+        margin-bottom: 325px;
+    }
+
+    .pc_header_nav {
+        display: none;
     }
 }
 
@@ -1220,16 +1273,22 @@ textarea.c-form__input {
         width: 1px;
         background: #fff;
     }
-
-    .concept_title {
-        font-size: 28px;
-        line-height: 1.6;
-    }
     .logo_img {
         padding: 30px 0 0 30px;
         width: 80px;
         margin-bottom: 100px;
     }
+
+    /*----------コンセプト----------*/
+    #concept {
+        max-width: 76%;
+        margin: none;
+    }
+    .concept_title {
+        font-size: 28px;
+        line-height: 1.6;
+    }
+
     .concept_subtitle {
         font-size: 25px;
         line-height: 2;
@@ -1239,8 +1298,10 @@ textarea.c-form__input {
         line-height: 1.7;
         padding: 30px 0 50px 0;
     }
+
+    /*----------アバウト----------*/
     h2 {
-        font-size: 25px;
+        font-size: 45px;
     }
     .about {
         text-align: left;
@@ -1249,17 +1310,34 @@ textarea.c-form__input {
         font-size: 14px;
     }
     #about {
-        max-width: 80%;
+        max-width: 76%;
+        text-align: left;
     }
-    .about_title {
+    #about_title {
+        text-align: left;
+        margin-left: 16px;
+    }
+    #about img {
+        text-align: left;
+        margin: 0;
+        width: 73%;
+        max-width: none;
+        /* margin: auto;
+        display: block;
+        padding: 30px 0 30px 0; */
+    }
+    #about .about_title {
         text-align: left;
     }
     picture {
         padding-top: 60px;
         margin-right: auto;
     }
+    .name {
+        text-align: left;
+    }
     .about_name {
-        font-size: 30px;
+        font-size: 32px;
     }
     .about_sub_name {
         font-size: 18px;
@@ -1278,5 +1356,111 @@ textarea.c-form__input {
     }
     .br_sp {
         display: block;
+    }
+
+    .list_title {
+        font-size: 14px;
+    }
+    #profile {
+        padding-left: 26%;
+    }
+
+    #about .bg_grass_right {
+        top: 10%;
+        right: 0;
+    }
+
+    #about .bg_bubble_right {
+        display: none;
+    }
+    /*----------ワークス----------*/
+    #works .bg_grass_left {
+        top: -35%;
+        left: 0;
+    }
+    #works_text {
+        margin: o auto;
+    }
+    h2.works::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/1x/1x/works_img.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        bottom: 10px;
+        right: -20px;
+        z-index: -1;
+    }
+
+    #works_text {
+        font-size: 14px;
+        padding-bottom: 90px;
+    }
+
+    #works_box {
+        margin: auto;
+        display: block;
+        background: linear-gradient(to right, #3f8fca, #3fc8ca);
+        max-width: 60%;
+        margin-bottom: 80px;
+        border-radius: 0 60px 0 60px;
+        text-align: center;
+        padding: 0 265px 0 265px;
+
+        display: flex;
+        align-items: flex-start;
+        padding: 47px 8% 47px 5%;
+        justify-content: space-between;
+
+        position: relative;
+
+        /* はみ出たところを隠す */
+        overflow: hidden;
+        /* 上に重ねる */
+        z-index: 10;
+
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .works_bg_blend {
+        background: linear-gradient(to right, #3f8fca, #3fc8ca);
+        /* 乗算 */
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* 下に重ねる */
+        z-index: -10;
+    }
+    .works_box_1 img {
+        width: 65%;
+        margin: 0 auto;
+    }
+    .works_box_2 img {
+        width: 55%;
+        margin: 0 auto;
+    }
+    .works_box_3 img {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .box_text {
+        color: #ffff;
+        font-size: 22px;
+        text-align: left;
+        display: block;
+        padding: 15px 0 0 15%;
+    }
+    .box_title {
+        font-size: 15px;
+        padding-bottom: 10%;
+    }
+    .box_subtitle {
+        font-size: 14px;
     }
 }
