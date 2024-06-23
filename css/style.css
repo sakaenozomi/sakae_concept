@@ -1136,9 +1136,11 @@ textarea.c-form__input {
     }
     .sp_btn span::before {
         bottom: 10px;
+        border-image: url("../2x/hamburger_up@2x.png");
     }
     .sp_btn span::after {
         top: 10px;
+        border-image: url("../2x/hamburger_under@2x.png");
     }
     /*ばつ印*/
     .sp_btn.open span {
