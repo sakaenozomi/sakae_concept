@@ -8,14 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>コンセプトシート</title>
     <link rel="stylesheet" href="https://use.typekit.net/cwg0thw.css">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    // Add the new slick-theme.css if you want the default styling
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" /> -->
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         (function (d) {
             var config = {
@@ -97,10 +102,16 @@
                     </ul>
                 </nav>
                 <div class="sp_btn ">
-                    <span></span>
-                </div>
-                <div class="sp_btn ">
-                    <span></span>
+                    <svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.04 19.19">
+                        <g id="text">
+                            <g>
+                                <path class="cls-1"
+                                    d="M0,13.88c22.1-10.93,49.92,6.27,73.12,3.28,3.44-.47,6.82-1.52,9.93-3.24-2.82,2.16-6.22,3.57-9.72,4.37-10.57,2.26-21.5-.18-31.84-2.23C27.87,13.27,13.52,9.34,0,13.88h0Z" />
+                                <path class="cls-1"
+                                    d="M27.78,3.79c20.73-11.59,31.28,7.54,48.65,2.73,2.27-.62,4.45-1.61,6.61-2.69-1.88,1.52-3.97,2.81-6.24,3.77-17.87,6.84-26.3-11.63-49.03-3.81h0Z" />
+                            </g>
+                        </g>
+                    </svg>
                 </div>
                 <nav class="sp_nav">
                     <ul>
@@ -353,12 +364,12 @@
             </div>
         </footer>
     </div>
-    </div>
+
     <!--==============JQuery読み込み===============-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
-    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-5/js/4-1-5.js"></script>
+    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-5/js/4-1-5.js"></script> -->
 
 
 
@@ -380,34 +391,34 @@
             // }); 
 
 
-            $(document).ready(function () {
-                $('.container').slick({
-                    centerMode: true,
-                    infinite: true,
-                    centerPadding: '60px',
-                    slidesToShow: 3,
-                    speed: 500,
-                    responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            arrows: false,
-                            centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 3
-                        }
-                    }, {
-                        breakpoint: 480,
-                        settings: {
-                            arrows: false,
-                            centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 1
-                        }
-                    }]
-                });
-            });
 
+            $('.container').slick({
+                centerMode: true,
+                infinite: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                speed: 500,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }]
+            });
         });
+
+
 
 
 
@@ -415,6 +426,6 @@
     </script>
 </body>
 
-</div>
+
 
 </html>
