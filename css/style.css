@@ -599,7 +599,7 @@ h2.works::after {
 }
 .works_item {
     margin: 0 auto;
-    width: 950px;
+    max-width: 950px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -669,6 +669,7 @@ h2.works::after {
 }
 .pc_works_img {
     display: block !important;
+    height: 100%;
 }
 .sp_works_img {
     display: none !important;
@@ -903,7 +904,7 @@ h2.contact::after {
 }
 .contact_us_button {
     background-color: blue;
-    width: 730px;
+    width: 54%;
     height: 110px;
     border-radius: 35px;
     align-items: center;
@@ -920,7 +921,7 @@ h2.contact::after {
     left: 31%;
 }
 .c-form {
-    max-width: 800px;
+    width: 60%;
     margin: 0 auto;
 }
 .c-form__item {
@@ -1252,6 +1253,108 @@ textarea.c-form__input {
     }
 }
 
+@media screen and (max-width: 857px) {
+    /*----------ワークス一覧----------*/
+
+    .pc_dots {
+        display: none !important;
+    }
+    .sp_dots {
+        display: block !important;
+        margin-left: 3%;
+        width: 30%;
+    }
+
+    .pc_woks_img {
+        display: none !important;
+    }
+    .sp_woks_img {
+        display: block !important;
+    }
+    .works_item_img {
+        height: 100%;
+    }
+    #works {
+        max-width: 85%;
+    }
+    #works_text {
+        font-size: 14px;
+        padding-bottom: 80px;
+    }
+    .works_item {
+        margin: 0 auto;
+        width: 85%;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 30px;
+    }
+    #works_item {
+        width: 320px;
+        height: 170px;
+        background-image: linear-gradient(
+            150deg,
+            rgba(63, 143, 202, 1),
+            rgba(63, 200, 202, 1) 90%
+        );
+        margin: 0 auto;
+        margin-bottom: 68px;
+        position: relative;
+    }
+
+    .bg {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    .num {
+        font-size: 60px;
+        line-height: 1.5;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        margin: 0;
+    }
+
+    .text_item {
+        background-image: linear-gradient(
+            0deg,
+            rgba(63, 143, 202, 1),
+            rgba(63, 143, 202, 1) 30%,
+            rgba(255, 255, 255, 0.2) 70%,
+            rgba(255, 255, 255, 0)
+        );
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 125px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .text_item p {
+        color: #fff;
+        font-weight: bold;
+        margin-left: 3%;
+        text-align: left;
+    }
+    .text_item p:nth-child(1) {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .text_item p:nth-child(2) {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .top_bg {
         background-image: url("../images/1x/1x/sp_bg-80.jpg");
@@ -1390,12 +1493,16 @@ textarea.c-form__input {
     }
     /*----------ワークス----------*/
     #works .bg_grass_left {
-        top: -35%;
+        top: -20%;
         left: 0;
     }
-    #works_text {
-        margin: o auto;
+    #works .bg_bubble_left {
+        display: none;
     }
+    #works_text {
+        margin: 0 auto;
+    }
+
     h2.works::after {
         content: "";
         display: block;
@@ -1478,98 +1585,34 @@ textarea.c-form__input {
     .box_subtitle {
         font-size: 14px;
     }
-
-    /*----------ワークス一覧----------*/
-
-    .pc_dots {
-        display: none !important;
-    }
-    .sp_dots {
-        display: block !important;
-    }
-
-    .pc_woks_img {
-        display: none !important;
-    }
-    .sp_woks_img {
-        display: block !important;
-    }
-
-    #works {
-        max-width: 85%;
-    }
-    #works_text {
-        font-size: 14px;
-        padding-bottom: 80px;
-    }
-    .works_item {
-        margin: 0 auto;
-        width: 85%;
+    /*----------ワークス詳細----------*/
+    #wk_title {
         flex-direction: column;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        text-align: center;
-        gap: 30px;
     }
-    #works_item {
-        width: 320px;
-        height: 170px;
-        background-image: linear-gradient(
-            150deg,
-            rgba(63, 143, 202, 1),
-            rgba(63, 200, 202, 1) 90%
-        );
-        margin: 0 auto;
-        margin-bottom: 68px;
-        position: relative;
+    .wk_text_items {
+        flex-direction: column;
     }
 
-    .bg {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .num {
-        font-size: 60px;
-        font-weight: bold;
-        color: white;
-        position: absolute;
-        top: 15px;
-        left: 20px;
-        margin: 0;
-    }
-
-    .text_item {
-        background-image: linear-gradient(
-            0deg,
-            rgba(63, 143, 202, 1),
-            rgba(63, 143, 202, 1) 30%,
-            rgba(255, 255, 255, 0.2) 70%,
-            rgba(255, 255, 255, 0)
-        );
-        position: absolute;
-        bottom: 0;
-        left: 0;
+    .wk_text_contant {
         width: 100%;
-        height: 125px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+    }
+    .wk_text_contants {
+        max-width: 100%;
+
+        padding-bottom: 0;
+    }
+    .btn_parts {
+        margin-top: 55px;
     }
 
-    .text_item p {
-        color: #fff;
-        font-weight: bold;
-        margin-left: 10px;
-        text-align: left;
+    #wk_btn {
+        padding-bottom: 120px;
     }
-    .text_item p:nth-child(1) {
-        font-size: 12px;
-        margin-bottom: 5px;
-    }
-    .text_item p:nth-child(2) {
-        font-size: 15px;
-        margin-bottom: 18px;
+
+    /*----------プライバシーポリシー----------*/
+
+    /*----------コンタクト----------*/
+    .contact_subtext {
+        text-align: right;
     }
 }
