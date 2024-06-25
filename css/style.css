@@ -1015,7 +1015,7 @@ textarea.c-form__input {
 }
 .contact_us_button {
     background: linear-gradient(to right, #0054a7, #16234f);
-    width: 730px;
+    width: 53%;
     height: 110px;
     border-radius: 35px;
     align-items: center;
@@ -1587,10 +1587,10 @@ textarea.c-form__input {
     }
     /*----------ワークス詳細----------*/
     #wk_title {
-        flex-direction: column;
+        display: block;
     }
     .wk_text_items {
-        flex-direction: column;
+        display: block;
     }
 
     .wk_text_contant {
@@ -1608,11 +1608,27 @@ textarea.c-form__input {
     #wk_btn {
         padding-bottom: 120px;
     }
-
+    .box_title {
+        font-size: 15px;
+    }
+    .box_subtitle {
+        font-size: 13px;
+    }
     /*----------プライバシーポリシー----------*/
-
+    .privacy_text {
+        font-size: 16px;
+    }
+    #text {
+        font-size: 14px;
+    }
     /*----------コンタクト----------*/
     .contact_subtext {
         text-align: right;
+    }
+    .contact_us_button {
+        width: 215px;
+    }
+    .contact_us_button_text {
+        font-size: 14px;
     }
 }
