@@ -226,7 +226,6 @@
             </div>
             <div class="content_bg">
                 <div id="works" class="content_box">
-                    <div class="pc_bg_bubble_right"></div>
                     <div class="pc_bg_bubble_left"></div>
                     <div class="pc_bg_grass_left"></div>
                     <div class="pc_bg_fish_01"></div>
@@ -234,6 +233,7 @@
                     <div class="pc_bg_fish_03"></div>
                     <div class="pc_bg_fish_04"></div>
                     <div class="pc_bg_fish_05"></div>
+                    <div class=".works_bg_bubble_right"></div>
                     <div class="works">
                         <div class="title">
                             <h2 class="works">works</h2>
@@ -408,6 +408,10 @@
                     $('.container').not('.slick-initialized').slick({
                         centerMode: true,
                         infinite: true,
+                        // autoplay: true,
+                        arrows: false,
+                        dots: true,
+                        autoplaySpeed: 2000,
                         centerPadding: '60px',
                         slidesToShow: 1,
                         speed: 500,

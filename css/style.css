@@ -168,7 +168,7 @@ ul {
     animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
     animation-delay: 0.3s;
 }
-#works .bg_bubble_right {
+.works_bg_bubble_right {
     background-image: url("../2x/pc_works_bubbule@2x.png");
     background-repeat: no-repeat;
     width: 11%;
@@ -530,7 +530,7 @@ h2.about::after {
     top: -40%;
     right: 0%;
 }
-c h2.works {
+h2.works {
     position: relative;
     line-height: normal;
     display: inline-block;
@@ -1513,8 +1513,15 @@ textarea.c-form__input {
     #about_subtitle {
         font-size: 20px;
     }
+
     #profile_title {
         font-size: 25px;
+    }
+    #profile_list {
+        font-size: 17px;
+    }
+    .list_text {
+        font-size: 14px;
     }
     .profile_subtitle {
         font-size: 14px;
@@ -1543,19 +1550,21 @@ textarea.c-form__input {
     }
     .sp_bg_grass_right {
         display: block;
+        right: 0;
     }
     .pc_bg_bubble_right {
         display: none;
     }
     /*----------ワークス----------*/
+    .pc_bg_bubble_right {
+        display: none;
+    }
     #works .bg_grass_left {
         top: -20%;
         left: 0;
     }
-    #works .bg_bubble_left {
-        display: none;
-    }
-    #works .bg_bubble_right {
+
+    .works_bg_bubble_right {
         display: block;
         top: 50px;
         right: 0;
@@ -1624,6 +1633,16 @@ textarea.c-form__input {
     .box_subtitle {
         font-size: 14px;
         padding-bottom: 20px;
+    }
+
+    .slick-dots {
+        bottom: -50px;
+    }
+    .slick-dots li.slick-active button:before {
+        color: #fff;
+    }
+    .slick-dots li button:before {
+        color: #fff;
     }
     /*----------ワークス詳細----------*/
     #wk_title {
