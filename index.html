@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -139,40 +142,45 @@
             </div>
             <div class="content_bg">
                 <div id="about" class="content_box">
-                    <div id="about_title" class="title">
-                        <h2 class="about">about</h2>
+                    <div class="pc_bg_bubble_right"></div>
+                    <div class="pc_bg_grass_right"></div>
+                    <div class="sp_bg_grass_right"></div>
+                    <div id="about" class="content_box">
+                        <div id="about_title" class="title">
+                            <h2 class="about">about</h2>
 
-                        <h3 class="about_title">わたしのこと</h3>
-                    </div>
-                    <picture>
-                        <source srcset="./images/1x/sp_profile_img.png" media="(max-width:767px)">
-                        <img src="./images/1x/pc_profile_img.png" alt="プロフィール写真">
-                    </picture>
+                            <h3 class="about_title">わたしのこと</h3>
+                        </div>
+                        <div class="about_image">
+                            <picture>
+                                <source srcset="./2x/sp_about_img@2x.png" media="(max-width:767px)">
+                                <img src="./images/1x/pc_profile_img.png" alt="プロフィール写真">
+                            </picture>
+                        </div>
 
-                    <div class="name">
-                        <p class="about_name">NOZOMI SAKAE</p>
-                        <p class="about_sub_name">榮のぞみ</p>
+                        <div class="name">
+                            <p class="about_name">NOZOMI SAKAE</p>
+                            <p class="about_sub_name">榮のぞみ</p>
+                        </div>
+
+                        <h3 id="about_subtitle" classs="title">
+                            人との繋がり、おもてなしを大切に<br>
+                            デザインを通して思いや願いを繋げていく。
+                        </h3>
+                        <p id="about_text" class="text">
+                            1994年生まれ。鹿児島県奄美大島出身、大阪市内で夫と息子２人と４人暮らし。<br>
+                            小さな島で生まれ育ち、毎日のように海で泳ぎ、砂浜で大きな山やお城を作って遊ぶ日々を過ごしました。
+                            木登りが得意で高いところから眺める景色が大好きでした。幼少期は自然の中で遊びまわっていたので、
+                            周りにびっくりされるほど真っ黒に日焼けしていました。食べる事や料理も好きで、周りの人を食で笑顔に
+                            したいという思いから高校卒業後、栄養士を目指し１８年生まれ育った島を離れ大阪へ進学。卒業後は、
+                            栄養士として保育園や幼稚園で働き、食を通して子供達の成長をサポートしています。妊娠出産を経て、
+                            子育てしていく中で子供達には自分が好きなことを自分で選んで成長して欲しいと思った時、まずは自分が
+                            そうでないと、と思い元々興味があったWEBデザインに挑戦しようと思い2024年3月デザスタを受講。
+                            人との繋がりをとても大事にしている環境で育ったからこそデザインを通して思いや願いを繋げていくお手
+                            伝いができたらと思います。
+                        </p>
                     </div>
-                    <div class="bg_bubble_right"></div>
-                    <div class="bg_grass_right"></div>
-                    <h3 id="about_subtitle" classs="title">
-                        人との繋がり、おもてなしを大切に<br>
-                        デザインを通して思いや願いを繋げていく。
-                    </h3>
-                    <p id="about_text" class="text">
-                        1994年生まれ。鹿児島県奄美大島出身、大阪市内で夫と息子２人と４人暮らし。<br>
-                        小さな島で生まれ育ち、毎日のように海で泳ぎ、砂浜で大きな山やお城を作って遊ぶ日々を過ごしました。
-                        木登りが得意で高いところから眺める景色が大好きでした。幼少期は自然の中で遊びまわっていたので、
-                        周りにびっくりされるほど真っ黒に日焼けしていました。食べる事や料理も好きで、周りの人を食で笑顔に
-                        したいという思いから高校卒業後、栄養士を目指し１８年生まれ育った島を離れ大阪へ進学。卒業後は、
-                        栄養士として保育園や幼稚園で働き、食を通して子供達の成長をサポートしています。妊娠出産を経て、
-                        子育てしていく中で子供達には自分が好きなことを自分で選んで成長して欲しいと思った時、まずは自分が
-                        そうでないと、と思い元々興味があったWEBデザインに挑戦しようと思い2024年3月デザスタを受講。
-                        人との繋がりをとても大事にしている環境で育ったからこそデザインを通して思いや願いを繋げていくお手
-                        伝いができたらと思います。
-                    </p>
                 </div>
-
                 <div id="profile">
                     <div class="profile">
                         <h4 id="profile_title">Profile</h4>
@@ -180,14 +188,14 @@
                     </div>
                     <ul id="profile_list">
                         <li class="profile_list">所在地 <span class="profile_dots">・・・・・・</span> <br class="br_sp">
-                            <div class="list_text">大阪市内</div>
+                            <span class="list_text">大阪市内</span>
                         </li>
                         <li class="profile_list">お問い合わせ<span class="profile_dots"> ・・・ </span><br class="br_sp">
-                            <div class="list_text">noozoomey@gmail.com</div>
+                            <span class="list_text">noozoomey@gmail.com</span>
                         </li>
                         <li class="profile_list">事業内容<span class="profile_dots"> ・・・・・ </span><br class="br_sp">
-                            <div class="list_text">Web制作におけるディレクション、デザイン、<br>
-                                HTML・CSSコーディング、スマートフォンサイト</div>
+                            <span class="list_text">Web制作におけるディレクション、デザイン、<br>
+                                HTML・CSSコーディング、スマートフォンサイト</span>
                         </li>
                     </ul>
                     <div id="profile_img">
@@ -218,13 +226,14 @@
             </div>
             <div class="content_bg">
                 <div id="works" class="content_box">
-                    <div class="bg_bubble_left"></div>
-                    <div class="bg_grass_left"></div>
-                    <div class="bg_fish_01"></div>
-                    <div class="bg_fish_02"></div>
-                    <div class="bg_fish_03"></div>
-                    <div class="bg_fish_04"></div>
-                    <div class="bg_fish_05"></div>
+                    <div class="pc_bg_bubble_right"></div>
+                    <div class="pc_bg_bubble_left"></div>
+                    <div class="pc_bg_grass_left"></div>
+                    <div class="pc_bg_fish_01"></div>
+                    <div class="pc_bg_fish_02"></div>
+                    <div class="pc_bg_fish_03"></div>
+                    <div class="pc_bg_fish_04"></div>
+                    <div class="pc_bg_fish_05"></div>
                     <div class="works">
                         <div class="title">
                             <h2 class="works">works</h2>
@@ -239,7 +248,7 @@
 
                 <div class="container">
 
-                    <div id="works_box" class="works_box_1">
+                    <div class="works_box_1 works_box">
                         <div class="box_text">
                             <p class="box_title">WEB広告バナーデザイン</p>
                             <p class="box_subtitle">#バナーデザイン</p>
@@ -247,7 +256,7 @@
                         <img src="./images/1x/works_kadai1-80.jpg" alt="">
                         <div class="works_bg_blend"></div>
                     </div>
-                    <div id="works_box" class="works_box_2">
+                    <div class="works_box_2 works_box">
                         <div class="box_text">
                             <p class="box_title">旅行メディアバナーデザイン</p>
                             <p class="box_subtitle">#バナーデザイン</p>
@@ -255,12 +264,12 @@
                         <img src="./images/kadai2_sakae_02.jpeg" alt="">
                         <div class="works_bg_blend"></div>
                     </div>
-                    <div id="works_box" class="works_box_3">
+                    <div class="works_box_3 works_box">
                         <div class="box_text">
                             <p class="box_title">コワーキングスペースLPデザイン</p>
                             <p class="box_subtitle">#LPデザイン</p>
                         </div>
-                        <img src="./1x/lp_works.png" alt="">
+                        <img src="./2x/lp_works_1@2x.png" alt="">
                         <div class="works_bg_blend"></div>
                     </div>
                 </div>
@@ -271,69 +280,73 @@
                 </div>
 
 
+                <div id="contact" class="content_box">
+                    <div class="content_bg">
+                        <div id="contact" class="content_box">
+                            <div class="bg_fish_06"></div>
+                            <div class="sp_grass_right_under"></div>
 
-                <div class="content_bg">
-                    <div id="contact" class="content_box">
-                        <div class="bg_fish_06"></div>
-                        <div class="title">
-                            <h2 class="contact">Contact us</h2>
-                            <h3 class="contact_title">お問い合わせ</h3>
-                        </div>
-                        <!-- </div> -->
-                        <div id="contact_text">
-                            <p class="text">
-                                「相談したい。」「話を聞いてみたい。」と思ってくださった方は<br>
-                                下記メールフォームよりお問い合わせください。
-                            </p>
-                            <p class="contact_text">
-                                以下のフォームに必要事項をご入力いただき、内容をご確認のうえ、<br>
-                                送信ボタンを押してください。 ( ＊マークは必須項目です。)</p>
+                            <div class="title">
+                                <h2 class="contact">Contact us</h2>
+                                <h3 class="contact_title">お問い合わせ</h3>
+                            </div>
+                            <!-- </div> -->
+                            <div id="contact_text">
+                                <p class="text">
+                                    「相談したい。」「話を聞いてみたい。」と思ってくださった方は<br>
+                                    下記メールフォームよりお問い合わせください。
+                                </p>
+                                <p class="contact_text">
+                                    以下のフォームに必要事項をご入力いただき、内容をご確認のうえ、<br>
+                                    送信ボタンを押してください。 ( ＊マークは必須項目です。)</p>
+                            </div>
                         </div>
                     </div>
-                    <form
-                        action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe00eJN0CWayVTtmGW0ONrc6MT8bA5no3F9iHgbGwaOm18KRw/formResponse"
-                        method="POST" class="c-form">
-                        <div class="contact_subtext">＊は必須項目となります。</div>
+                </div>
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfzDV7hARLseyXETPjwXfDZcpSfFAWbHnCTkcDQgDxLgs1UOw/formResponse"
+                    method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+                    <div class="contact_subtext">＊は必須項目となります。</div>
 
-                        <div class="c-form__item">
-                            <label class="c-form__label" for="field-name">お名前＊<span
-                                    class="c-form__required"></span></label>
-                            <input class="c-form__input" id="field-name" placeholder="山田 花子" type="text"
-                                required="required" />
-                        </div>
-                        <div class="c-form__item">
-                            <label class="c-form__label" for="field-name">ふりがな＊<span
-                                    class="c-form__required"></span></label>
-                            <input class="c-form__input" id="field-name" placeholder="やまだ　はなこ" type="text"
-                                required="required" />
-                        </div>
-                        <div class="c-form__item">
-                            <label class="c-form__label" for="field-mail">メールアドレス＊<span
-                                    class="c-form__required"></span></label>
-                            <input class="c-form__input" id="field-mail" placeholder="aaaaa@gmail.com" type="email"
-                                required="required" />
-                        </div>
-                        <div class="c-form__item">
-                            <label class="c-form__label" for="field-mail">電話番号<span
-                                    class="c-form__required"></span></label>
-                            <input class="c-form__input" id="field-mail" placeholder="090-9999-9999" type="tel" />
-                        </div>
-                        <div class="c-form__item">
-                            <label class="c-form__label" for="field-message">お問い合わせ内容＊</label>
-                            <textarea class="c-form__input" id="field-message" placeholder=""></textarea>
-                        </div>
-                        <div class="c-form__submit">
-                            <button class="btn_parts" type="submit">送信する</button>
-                        </div>
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-name">お名前＊<span class="c-form__required"></span></label>
+                        <input name="entry.100221815" class="c-form__input" id="field-name" placeholder="山田 花子"
+                            type="text" required="required" />
+                    </div>
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-ruby">ふりがな＊<span
+                                class="c-form__required"></span></label>
+                        <input name="entry.344891332" class="c-form__input" id="field-ruby" placeholder="やまだ　はなこ"
+                            type="text" required="required" />
+                    </div>
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-mail">メールアドレス＊<span
+                                class="c-form__required"></span></label>
+                        <input name="entry.764234519" class="c-form__input" id="field-mail"
+                            placeholder="aaaaa@gmail.com" type="email" required="required" />
+                    </div>
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-tel">電話番号<span class="c-form__required"></span></label>
+                        <input name="entry.803813522" class="c-form__input" id="field-tel" placeholder="090-9999-9999"
+                            type="tel" />
+                    </div>
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-message">お問い合わせ内容＊</label>
+                        <textarea name="entry.678565771" class="c-form__input" id="field-message"
+                            placeholder=""></textarea>
+                    </div>
+                    <div class="c-form__submit">
+                        <button class="btn_parts" type="submit">送信する</button>
+                    </div>
 
-                        <!-- <div id="contact_button">
+                    <!-- <div id="contact_button">
                 <div class="button"></div>
                 <p class="button_text">
                     送信する
                 </p>
             </div> -->
-                    </form>
-                </div>
+                </form>
+            </div>
 
         </main>
 
@@ -391,33 +404,25 @@
             // }); 
 
             function spSlider() {
-                if ($(window).width <= 767) {
-                    $('.container').slick({
+                if ($(window).width() <= 767) {
+                    $('.container').not('.slick-initialized').slick({
                         centerMode: true,
                         infinite: true,
                         centerPadding: '60px',
-                        slidesToShow: 3,
+                        slidesToShow: 1,
                         speed: 500,
                         responsive: [{
-                            breakpoint: 768,
-                            settings: {
-                                arrows: false,
-                                centerMode: true,
-                                centerPadding: '40px',
-                                slidesToShow: 3
-                            }
-                        }, {
                             breakpoint: 480,
                             settings: {
                                 arrows: false,
-                                centerMode: true,
-                                centerPadding: '40px',
+                                centerMode: false,
+                                // centerPadding: '40px',
                                 slidesToShow: 1
                             }
                         }]
                     });
                 } else {
-                    $('.container').slick('unslick')
+                    $('.slick-initialized').slick('unslick')
                 }
             }
             $(window).resize(function () {
@@ -435,6 +440,11 @@
 
 
     </script>
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='./thanks.html';}"></iframe>
 </body>
 
 
