@@ -621,15 +621,20 @@ h2.works::after {
     /* 下に重ねる */
     z-index: -10;
 }
-.works_box_1 img {
+.works_box_1 .works_box_image {
     width: 40%;
 }
-.works_box_2 img {
+.works_box_image img {
+    width: 100%;
+}
+.works_box_2 .works_box_image {
     width: 35%;
 }
-.works_box_3 img {
+
+.works_box_3 .works_box_image {
     width: 60%;
 }
+
 .box_text {
     color: #ffff;
     font-size: 22px;
@@ -1003,7 +1008,7 @@ h2.contact::after {
 }
 .contact_us_button_text {
     color: #ffff;
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
     display: block;
 }
@@ -1045,7 +1050,8 @@ textarea.c-form__input {
 }
 .btn_parts {
     background: linear-gradient(to right, #0054a7, #16234f);
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
     height: 80px;
     border-radius: 40px;
     align-items: center;
@@ -1103,7 +1109,7 @@ textarea.c-form__input {
 .contact_us_button {
     background: linear-gradient(to right, #0054a7, #16234f);
     width: 53%;
-    height: 110px;
+    height: 80px;
     border-radius: 35px;
     align-items: center;
     margin: 0 auto;
@@ -1668,6 +1674,13 @@ textarea.c-form__input {
         padding: 10px 0;
         flex-direction: column-reverse;
         margin: 0 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .works_box_image {
+        height: 70%;
+        display: flex;
+        align-items: center;
     }
     .container {
         padding: 0;
@@ -1677,24 +1690,20 @@ textarea.c-form__input {
         max-width: 265px;
         margin: 0 auto;
         width: 100%;
-        padding: 40px 0 30px 0;
     }
     .works_box_2 img {
         margin: 0 auto;
         width: 45%;
-        padding: 20px;
     }
     .works_box_3 img {
         width: 70%;
         margin: 0 auto;
-        padding: 30px;
     }
     .box_text {
         color: #ffff;
         font-size: 22px;
         text-align: left;
         display: block;
-        padding: 15px 0 0 15%;
     }
     .box_title {
         font-size: 15px;
