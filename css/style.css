@@ -76,6 +76,7 @@ ul {
 .pc_bg_bubble_right {
     background-image: url("../images/1x/1x/bg_item.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 11%;
     height: 675px;
     position: absolute;
@@ -83,6 +84,7 @@ ul {
 .pc_bg_grass_right {
     background-image: url("../images/1x/1x/bg_item_1.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 162px;
     height: 718px;
     mix-blend-mode: multiply;
@@ -109,6 +111,7 @@ ul {
 .pc_bg_bubble_left {
     background-image: url("../images/1x/1x/bg_item.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 11%;
     height: 675px;
     position: absolute;
@@ -116,6 +119,7 @@ ul {
 .pc_bg_grass_left {
     background-image: url("../1x/bg_item2.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 162px;
     height: 718px;
     mix-blend-mode: multiply;
@@ -141,6 +145,7 @@ ul {
 .pc_bg_fish_01 {
     background-image: url("../images/1x/1x/fish1.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 135px;
     height: 42px;
     position: absolute;
@@ -150,6 +155,7 @@ ul {
 .pc_bg_fish_02 {
     background-image: url("../images/1x/1x/fish2.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 135px;
     height: 42px;
     position: absolute;
@@ -158,6 +164,7 @@ ul {
 .pc_bg_fish_03 {
     background-image: url("../images/1x/1x/fish3.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 135px;
     height: 42px;
     position: absolute;
@@ -166,6 +173,7 @@ ul {
 .pc_bg_fish_04 {
     background-image: url("../images/1x/1x/fish4.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 70px;
     height: 20px;
     position: absolute;
@@ -174,6 +182,7 @@ ul {
 .pc_bg_fish_05 {
     background-image: url("../images/1x/1x/fish5.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 70px;
     height: 20px;
     position: absolute;
@@ -182,6 +191,7 @@ ul {
 .pc_bg_fish_06 {
     background-image: url("../images/1x/1x/fish6.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 135px;
     height: 42px;
     position: absolute;
@@ -191,13 +201,17 @@ ul {
 .works_bg_bubble_right {
     background-image: url("../2x/pc_works_bubbule@2x.png");
     background-repeat: no-repeat;
+    background-size: contain;
+    background-size: contain;
     width: 11%;
     height: 675px;
     position: absolute;
+    display: none;
 }
 .pc_bg_works_bubble {
     background-image: url("../1x/works_bg_item.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 135px;
     height: 42px;
     position: absolute;
@@ -205,6 +219,7 @@ ul {
 .pc_bg_wk_bubble {
     background-image: url("../1x/wk_bubble.png");
     background-repeat: no-repeat;
+    background-size: contain;
     width: 80px;
     height: 270px;
     position: absolute;
@@ -219,6 +234,7 @@ ul {
 .sp_bg_grass_left {
     background-image: url("2x/sp_grass_left@2x.png");
     background-repeat: no-repeat;
+    background-size: contain;
     background-size: contain;
     width: 80px;
     height: 270px;
@@ -291,7 +307,7 @@ ul {
     background-size: cover;
 }
 .works_item_bg {
-    background-image: url("../images/1x/works_item_bg_4-80.jpg");
+    background-image: url("../images/1x/works_bg_1-80.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -502,7 +518,7 @@ h2.about::after {
 #profile_img {
     width: 40px;
     display: flex;
-    padding-left: 20%;
+    padding: 5% 0 0 10%;
     gap: 20px;
 }
 #skill {
@@ -1336,6 +1352,10 @@ textarea.c-form__input {
     .pc_header_nav {
         display: none;
     }
+
+    .contact {
+        font-size: 100px;
+    }
 }
 @media screen and (max-width: 1032px) {
     h2.contact::after {
@@ -1444,6 +1464,9 @@ textarea.c-form__input {
     .text_item p:nth-child(2) {
         font-size: 15px;
         margin-bottom: 18px;
+    }
+    .contact {
+        font-size: 70px;
     }
 }
 
@@ -1600,7 +1623,7 @@ textarea.c-form__input {
     }
     .sp_bg_grass_left {
         left: 0;
-        top: 20%;
+        top: -20%;
     }
     #contact .sp_grass_right_under {
         background-image: url("../2x/sp_grass_right_under@2x.png");
@@ -1642,8 +1665,8 @@ textarea.c-form__input {
 
     .works_bg_bubble_right {
         display: block;
-        top: 50px;
-        right: 0;
+        right: 20px;
+        top: 30px;
     }
 
     #works_text {
@@ -1677,7 +1700,8 @@ textarea.c-form__input {
         align-items: center;
         justify-content: center;
     }
-    .works_box_image {
+    .works_box .works_box_image {
+        width: 100%;
         height: 70%;
         display: flex;
         align-items: center;
@@ -1693,7 +1717,9 @@ textarea.c-form__input {
     }
     .works_box_2 img {
         margin: 0 auto;
-        width: 45%;
+        height: 90%;
+        /* width: 45%; */
+        width: auto;
     }
     .works_box_3 img {
         width: 70%;
@@ -1828,5 +1854,8 @@ textarea.c-form__input {
     .contact {
         font-size: 42px;
         white-space: nowrap;
+    }
+    .contact {
+        font-size: 40px;
     }
 }
