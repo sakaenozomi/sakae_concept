@@ -146,7 +146,7 @@ ul {
     background-image: url("../images/1x/1x/fish1.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 135px;
+    width: 10%;
     height: 42px;
     position: absolute;
     animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
@@ -156,7 +156,7 @@ ul {
     background-image: url("../images/1x/1x/fish2.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 135px;
+    width: 10%;
     height: 42px;
     position: absolute;
     animation: floating-y 1.8s ease-in-out infinite alternate;
@@ -165,7 +165,7 @@ ul {
     background-image: url("../images/1x/1x/fish3.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 135px;
+    width: 10%;
     height: 42px;
     position: absolute;
     animation: floating-y 2.3s ease-in-out infinite alternate-reverse;
@@ -174,7 +174,7 @@ ul {
     background-image: url("../images/1x/1x/fish4.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 70px;
+    width: 5%;
     height: 20px;
     position: absolute;
     animation: floating-y 2.5s ease-in-out infinite alternate;
@@ -183,7 +183,7 @@ ul {
     background-image: url("../images/1x/1x/fish5.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 70px;
+    width: 5%;
     height: 20px;
     position: absolute;
     animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
@@ -192,7 +192,7 @@ ul {
     background-image: url("../images/1x/1x/fish6.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 135px;
+    width: 10%;
     height: 42px;
     position: absolute;
     animation: floating-y 1.8s ease-in-out infinite alternate;
@@ -1356,11 +1356,16 @@ textarea.c-form__input {
     .contact {
         font-size: 100px;
     }
+    h2.contact::after {
+        width: 200px;
+        bottom: 100px;
+        right: -80px;
+    }
 }
 @media screen and (max-width: 1032px) {
     h2.contact::after {
-        width: 300px;
-        bottom: 200px;
+        width: 200px;
+        bottom: 100px;
         right: -80px;
     }
 }
@@ -1655,6 +1660,23 @@ textarea.c-form__input {
         display: none;
     }
     /*----------ワークス----------*/
+    #works .pc_bg_fish_01 {
+        top: -15%;
+        left: 1%;
+    }
+    #works .pc_bg_fish_02 {
+        top: -57%;
+        right: 5%;
+    }
+
+    #works .pc_bg_fish_03 {
+        top: 55%;
+        left: 85%;
+    }
+    #works .pc_bg_fish_04 {
+        top: 56%;
+        left: 80%;
+    }
     .pc_bg_bubble_right {
         display: none;
     }
@@ -1671,6 +1693,14 @@ textarea.c-form__input {
 
     #works_text {
         margin: 0 auto;
+    }
+    #works .pc_bg_fish_03 {
+        top: 52%;
+        left: 10%;
+    }
+    #works .pc_bg_fish_04 {
+        top: 54%;
+        left: 10%;
     }
 
     h2.works::after {
@@ -1857,5 +1887,9 @@ textarea.c-form__input {
     }
     .contact {
         font-size: 40px;
+    }
+    #works .pc_bg_fish_02 {
+        top: -56%;
+        right: 5%;
     }
 }
