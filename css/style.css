@@ -80,7 +80,19 @@ ul {
     width: 11%;
     height: 675px;
     position: absolute;
+    /* animation: shake 2s infinite;
+    transform: rotate(20deg); */
 }
+/* @keyframes shake {
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(20deg);
+    }
+} */
+
 .pc_bg_grass_right {
     background-image: url("../images/1x/1x/bg_item_1.png");
     background-repeat: no-repeat;
@@ -90,6 +102,15 @@ ul {
     mix-blend-mode: multiply;
     position: absolute;
 }
+/* #txt {
+    width: 200px;
+    margin: 50px auto;
+    font-weight: bold;
+    font-size: 36px;
+    color: #c00;
+    font-family: impact;
+} */
+
 .sp_bg_grass_right {
     background-image: url("../2x/sp_grass_right@2x.png");
     background-repeat: no-repeat;
@@ -265,6 +286,10 @@ ul {
     color: #fff;
 }
 
+/* #splash.is-active {
+    opacity: 0;
+    visibility: hidden;
+} */
 /* Loading画像中央配置　*/
 #splash_logo {
     position: absolute;
@@ -275,7 +300,7 @@ ul {
 
 /* Loading アイコンの大きさ設定　*/
 #splash_logo svg {
-    width: 300px;
+    width: 500px;
 }
 
 /*=============== SVGアニメーション内の指定 =================*/
@@ -285,17 +310,21 @@ ul {
     fill-opacity: 0; /*最初は透過0で見えない状態*/
     transition: fill-opacity 0.5s; /*カラーがつく際のアニメーション0.5秒で変化*/
     fill: none; /*塗りがない状態*/
-    stroke: #333; /*線の色*/
+    stroke: #3fc8ca; /*線の色*/
 }
 
 /*アニメーション後に.doneというクラス名がで付与された時の指定*/
 #mask.done path {
-    fill: #333; /*塗りの色*/
+    fill: #3fc8ca; /*塗りの色*/
     fill-opacity: 1; /*透過1で見える状態*/
     stroke: none; /*線の色なし*/
 }
+/* #mask.is-active {
+    opacity: 1;
+    visibility: visible;
+} */
 
-/* 背景 */
+/*--------- 背景 --------*/
 .top_bg {
     background-image: url("../images/1x/top_bg_4-80.jpg");
     background-repeat: no-repeat;
@@ -995,6 +1024,17 @@ h2.contact::after {
     bottom: 50px;
     right: -150px;
     z-index: -1;
+    animation: shake 2s infinite;
+    transform: rotate(5deg);
+}
+@keyframes shake {
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
 }
 #contact_text {
     text-align: center;
@@ -1480,7 +1520,7 @@ textarea.c-form__input {
         display: block;
     }
     .top_bg {
-        background-image: url("../images/1x/1x/sp_bg-80.jpg");
+        background-image: url("../2x/2x/sp_bg@2x-80.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }

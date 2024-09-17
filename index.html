@@ -36,7 +36,7 @@
 <body>
 
 
-    <div id="splash">
+    <!-- <div id="splash">
         <div id="splash_logo">
             <svg version="1.1" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://
         www.w3.org/1999/xlink" x="0px" y="0px" width="1856.5px" height="321.8px" viewBox="0 0 1856.5 321.8"
@@ -77,7 +77,7 @@
                 </svg>
             </svg>
 
-        </div>
+        </div> -->
 
     </div>
     <div id="container">
@@ -285,6 +285,8 @@
                     <button class="btn_parts" onclick="location.href='./works.html'">もっと見る</button>
                 </div>
 
+
+
                 <div class="content_bg">
                     <div id="contact" class="content_box">
 
@@ -439,6 +441,29 @@
             })
             spSlider()
 
+
+            $(function () {
+                var webStorage = function () {
+                    if (sessionStorage.getItem('access')) {
+                        /*
+                          2回目以降アクセス時の処理
+                        */
+                        $("#splash").addClass('#splash.is-active');
+                    } else {
+                        /*
+                          初回アクセス時の処理
+                        */
+                        sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+                        $("#mask").addClass('#mask.is-active'); // loadingアニメーションを表示
+                        setTimeout(function () {
+                            // ローディングを数秒後に非表示にする
+                            $("#splash").addClass('#splash.is-active');
+                            $("#mask").removeClass('#mask.is-active');
+                        }, 3000); // ローディングを表示する時間
+                    }
+                }
+                webStorage();
+            });
 
 
         });

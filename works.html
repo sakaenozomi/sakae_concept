@@ -32,7 +32,6 @@
 
 <body>
     <div class="works_bg">
-
         <header id="header">
             <a href="./index.html"><img class="logo_img" src="./2x/logo@2x.png" alt="logo"></a>
             <div class="header_wrap">
@@ -40,7 +39,7 @@
                     <ul>
                         <li class="header_about"><a href="#about">about</a></li>
                         <li class="header_works"><a href="./works.html">works</a></li>
-                        <li class="header_contact"><a href="#contact">contact</a></li>
+                        <li class="header_contact"><a href="index.html#contact">contact</a></li>
                     </ul>
                 </nav>
                 <div class="sp_btn ">
@@ -242,15 +241,15 @@
     <!-- ==============JQuery読み込み===============-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
     <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-5/js/4-1-5.js"></script>
-
-
-
-
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle()
+                $('.sp_btn').toggleClass('open');
+            })
+        });
+    </script>
 </body>
 
-
-
-
-</div>
 
 </html>
